@@ -1,0 +1,25 @@
+using WMS_WEBAPI.DTOs;
+
+namespace WMS_WEBAPI.Interfaces
+{
+    public interface IErpService
+    {
+        // OnHandQuantity işlemleri
+        Task<ApiResponse<List<OnHandQuantityDto>>> GetOnHandQuantitiesAsync(int? depoKodu = null, string? stokKodu = null, string? seriNo = null, string? projeKodu = null);
+
+        // Cari işlemleri
+        Task<ApiResponse<List<CariDto>>> GetCarisAsync(string? cariKodu);
+        Task<ApiResponse<List<CariDto>>> GetCarisByCodesAsync(IEnumerable<string> cariKodlari);
+
+        // Stok işlemleri
+        Task<ApiResponse<List<StokDto>>> GetStoksAsync(string? stokKodu);
+        Task<ApiResponse<List<StokDto>>> GetStoksByCodesAsync(IEnumerable<string> stokKodlari);
+
+        // Depo işlemleri
+        Task<ApiResponse<List<DepoDto>>> GetDeposAsync(short? depoKodu);
+
+        // Proje işlemleri
+        Task<ApiResponse<List<ProjeDto>>> GetProjelerAsync();
+
+    }
+}

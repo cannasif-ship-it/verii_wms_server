@@ -1,0 +1,1412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Authentication Messages -->
+  <data name="UserNotFound" xml:space="preserve">
+    <value>User not found</value>
+  </data>
+  <data name="InvalidCredentials" xml:space="preserve">
+    <value>Invalid username or password</value>
+  </data>
+  <data name="UserRegisteredSuccessfully" xml:space="preserve">
+    <value>User registered successfully</value>
+  </data>
+  <data name="LoginSuccessful" xml:space="preserve">
+    <value>Login successful</value>
+  </data>
+  <data name="TokenGenerationFailed" xml:space="preserve">
+    <value>Token generation failed</value>
+  </data>
+  <data name="UserAlreadyExists" xml:space="preserve">
+    <value>User already exists</value>
+  </data>
+  <data name="RegistrationFailed" xml:space="preserve">
+    <value>Registration failed</value>
+  </data>
+  <data name="UnauthorizedAccess" xml:space="preserve">
+    <value>Unauthorized access</value>
+  </data>
+  
+  <!-- General Messages -->
+  <data name="InternalServerError" xml:space="preserve">
+    <value>An internal server error occurred</value>
+  </data>
+  <data name="OperationSuccessful" xml:space="preserve">
+    <value>Operation completed successfully</value>
+  </data>
+  <data name="ValidationError" xml:space="preserve">
+    <value>Validation error occurred</value>
+  </data>
+  
+  <!-- ERP Service Messages -->
+  <data name="OnHandQuantityRetrievedSuccessfully" xml:space="preserve">
+    <value>OnHandQuantity information retrieved successfully</value>
+  </data>
+  <data name="OnHandQuantityRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving OnHandQuantity information</value>
+  </data>
+  <data name="CariRetrievedSuccessfully" xml:space="preserve">
+    <value>Customer information retrieved successfully</value>
+  </data>
+  <data name="CariRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving customer information</value>
+  </data>
+  <data name="StokRetrievedSuccessfully" xml:space="preserve">
+    <value>Stock information retrieved successfully</value>
+  </data>
+  <data name="StokRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving stock information</value>
+  </data>
+  <data name="DepoRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse information retrieved successfully</value>
+  </data>
+  <data name="DepoRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving warehouse information</value>
+  </data>
+  <data name="ProjeRetrievedSuccessfully" xml:space="preserve">
+    <value>Project information retrieved successfully</value>
+  </data>
+  <data name="ProjeRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving project information</value>
+  </data>
+  <data name="CustomerOrderRetrievedSuccessfully" xml:space="preserve">
+    <value>Customer order information retrieved successfully</value>
+  </data>
+  <data name="CustomerOrderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving customer order information</value>
+  </data>
+  <data name="OrderDetailRetrievedSuccessfully" xml:space="preserve">
+    <value>Order detail information retrieved successfully</value>
+  </data>
+  <data name="OrderDetailRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving order detail information</value>
+  </data>
+  <data name="GrHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Header information retrieved successfully</value>
+  </data>
+  <data name="GrHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Header information</value>
+  </data>
+  
+  <!-- GrImportDocument Messages -->
+  <data name="Success" xml:space="preserve">
+    <value>Operation completed successfully</value>
+  </data>
+  <data name="Error_GetAll" xml:space="preserve">
+    <value>Error occurred while retrieving import documents</value>
+  </data>
+  <data name="Error_NotFound" xml:space="preserve">
+    <value>Import document not found</value>
+  </data>
+  <data name="Error_GetById" xml:space="preserve">
+    <value>Error occurred while retrieving import document</value>
+  </data>
+  <data name="Error_GetByHeaderId" xml:space="preserve">
+    <value>Error occurred while retrieving import documents by header ID</value>
+  </data>
+  <data name="Error_Create" xml:space="preserve">
+    <value>Error occurred while creating import document</value>
+  </data>
+  <data name="Error_Update" xml:space="preserve">
+    <value>Error occurred while updating import document</value>
+  </data>
+  <data name="Success_Deleted" xml:space="preserve">
+    <value>Import document deleted successfully</value>
+  </data>
+  <data name="Error_Delete" xml:space="preserve">
+    <value>Error occurred while deleting import document</value>
+  </data>
+  <data name="Error_Exists" xml:space="preserve">
+    <value>Error occurred while checking import document existence</value>
+  </data>
+  <data name="InvalidModelState" xml:space="preserve">
+    <value>Invalid model state</value>
+  </data>
+  <data name="UserNotFoundError" xml:space="preserve">
+    <value>User information not found</value>
+  </data>
+  <data name="ProfileRetrievedSuccessfully" xml:space="preserve">
+    <value>Profile information retrieved successfully</value>
+  </data>
+  
+  <!-- GrLine Messages -->
+  <data name="GrLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Line information retrieved successfully</value>
+  </data>
+  <data name="GrLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Line information</value>
+  </data>
+  <data name="GrLineNotFound" xml:space="preserve">
+    <value>Goods Receipt Line not found</value>
+  </data>
+  <data name="GrLineCreatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Line created successfully</value>
+  </data>
+  <data name="GrLineCreateError" xml:space="preserve">
+    <value>Error occurred while creating Goods Receipt Line</value>
+  </data>
+  <data name="GrLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Line updated successfully</value>
+  </data>
+  <data name="GrLineUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Goods Receipt Line</value>
+  </data>
+  <data name="GrLineDeletedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Line deleted successfully</value>
+  </data>
+  <data name="GrLineDeleteError" xml:space="preserve">
+    <value>Error occurred while deleting Goods Receipt Line</value>
+  </data>
+  <data name="GrLineExistsCheckError" xml:space="preserve">
+    <value>Error occurred while checking Goods Receipt Line existence</value>
+  </data>
+  <data name="GrLineExistsCheckCompleted" xml:space="preserve">
+    <value>Goods Receipt Line existence check completed</value>
+  </data>
+  <data name="GrHeaderNotFoundForLine" xml:space="preserve">
+    <value>Goods Receipt Header not found for this line</value>
+  </data>
+  
+  <!-- Additional GrHeader Messages -->
+  <data name="GrHeaderNotFound" xml:space="preserve">
+    <value>Goods Receipt Header not found</value>
+  </data>
+  <data name="GrHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Header created successfully</value>
+  </data>
+  <data name="GrHeaderCreationError" xml:space="preserve">
+    <value>Error occurred while creating Goods Receipt Header</value>
+  </data>
+  <data name="GrHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Header updated successfully</value>
+  </data>
+  <data name="GrHeaderUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Goods Receipt Header</value>
+  </data>
+  <data name="GrHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Header deleted successfully</value>
+  </data>
+  <data name="GrHeaderDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Goods Receipt Header</value>
+  </data>
+  <data name="GrHeaderSoftDeletionError" xml:space="preserve">
+    <value>Error occurred while soft deleting Goods Receipt Header</value>
+  </data>
+  <!-- Inventorycount Service Messages -->
+  <data name="IcHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Header information retrieved successfully</value>
+  </data>
+  <data name="IcHeaderErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Inventory Count Header operation</value>
+  </data>
+  <data name="IcHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Header created successfully</value>
+  </data>
+  <data name="IcHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Header updated successfully</value>
+  </data>
+  <data name="IcHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Header deleted successfully</value>
+  </data>
+  <data name="IcHeaderNotFound" xml:space="preserve">
+    <value>Inventory Count Header not found</value>
+  </data>
+  <data name="IcImportLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Import Line information retrieved successfully</value>
+  </data>
+  <data name="IcImportLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Inventory Count Import Line operation</value>
+  </data>
+  <data name="IcImportLineCreatedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Import Line created successfully</value>
+  </data>
+  <data name="IcImportLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Import Line updated successfully</value>
+  </data>
+  <data name="IcImportLineDeletedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Import Line deleted successfully</value>
+  </data>
+  <data name="IcImportLineNotFound" xml:space="preserve">
+    <value>Inventory Count Import Line not found</value>
+  </data>
+  <data name="IcRouteRetrievedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Route information retrieved successfully</value>
+  </data>
+  <data name="IcRouteErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Inventory Count Route operation</value>
+  </data>
+  <data name="IcRouteCreatedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Route created successfully</value>
+  </data>
+  <data name="IcRouteUpdatedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Route updated successfully</value>
+  </data>
+  <data name="IcRouteDeletedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Route deleted successfully</value>
+  </data>
+  <data name="IcRouteNotFound" xml:space="preserve">
+    <value>Inventory Count Route not found</value>
+  </data>
+  <data name="IcTerminalLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Terminal Line information retrieved successfully</value>
+  </data>
+  <data name="IcTerminalLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Inventory Count Terminal Line operation</value>
+  </data>
+  <data name="IcTerminalLineCreatedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Terminal Line created successfully</value>
+  </data>
+  <data name="IcTerminalLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Terminal Line updated successfully</value>
+  </data>
+  <data name="IcTerminalLineDeletedSuccessfully" xml:space="preserve">
+    <value>Inventory Count Terminal Line deleted successfully</value>
+  </data>
+  <data name="IcTerminalLineNotFound" xml:space="preserve">
+    <value>Inventory Count Terminal Line not found</value>
+  </data>
+  
+  <!-- Additional GrLine Messages -->
+  <data name="GrLineGetAllError" xml:space="preserve">
+    <value>Error occurred while retrieving all Goods Receipt Lines</value>
+  </data>
+  <data name="GrLineGetByIdError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Line by ID</value>
+  </data>
+  <data name="GrLineGetByHeaderIdError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Lines by Header ID</value>
+  </data>
+  <!-- Warehouse Inbound Messages -->
+  <data name="WiHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Inbound Header information retrieved successfully</value>
+  </data>
+  <data name="WiHeaderErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Warehouse Inbound Header operation</value>
+  </data>
+  <data name="WiHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Inbound Header created successfully</value>
+  </data>
+  <data name="WiHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Inbound Header updated successfully</value>
+  </data>
+  <data name="WiHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Inbound Header deleted successfully</value>
+  </data>
+  <data name="WiHeaderCompletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Inbound Header completed successfully</value>
+  </data>
+  <data name="WiHeaderNotFound" xml:space="preserve">
+    <value>Warehouse Inbound Header not found</value>
+  </data>
+  <data name="GrLineExistsError" xml:space="preserve">
+    <value>Error occurred while checking Goods Receipt Line existence</value>
+  </data>
+  
+  <!-- Additional GrImportDocument Messages -->
+  <data name="Error_InvalidHeaderId" xml:space="preserve">
+    <value>Invalid Header ID provided</value>
+  </data>
+  <data name="Success_Created" xml:space="preserve">
+    <value>Import document created successfully</value>
+  </data>
+  <data name="Success_Updated" xml:space="preserve">
+    <value>Import document updated successfully</value>
+  </data>
+  
+  <!-- GrImportSerialLine Messages -->
+  <data name="GrImportSerialLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line information retrieved successfully</value>
+  </data>
+  <data name="GrImportSerialLineGetAllError" xml:space="preserve">
+    <value>Error occurred while retrieving all Goods Receipt Import Serial Lines</value>
+  </data>
+  <data name="GrImportSerialLineNotFound" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line not found</value>
+  </data>
+  <data name="GrImportSerialLineGetByIdError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Import Serial Line by ID</value>
+  </data>
+  <data name="GrImportSerialLineGetByImportLineIdError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Receipt Import Serial Lines by Import Line ID</value>
+  </data>
+  <data name="GrImportLNotFound" xml:space="preserve">
+    <value>Goods Receipt Import Line not found</value>
+  </data>
+  <data name="GrImportSerialLineCreatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line created successfully</value>
+  </data>
+  <data name="GrImportSerialLineCreateError" xml:space="preserve">
+    <value>Error occurred while creating Goods Receipt Import Serial Line</value>
+  </data>
+  <data name="GrImportSerialLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line updated successfully</value>
+  </data>
+  <data name="GrImportSerialLineUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Goods Receipt Import Serial Line</value>
+  </data>
+  <data name="GrImportSerialLineDeletedSuccessfully" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line deleted successfully</value>
+  </data>
+  <data name="GrImportSerialLineDeleteError" xml:space="preserve">
+    <value>Error occurred while deleting Goods Receipt Import Serial Line</value>
+  </data>
+  <data name="GrImportSerialLineExistsCheckCompleted" xml:space="preserve">
+    <value>Goods Receipt Import Serial Line existence check completed</value>
+  </data>
+  <data name="GrImportSerialLineExistsCheckError" xml:space="preserve">
+    <value>Error occurred while checking Goods Receipt Import Serial Line existence</value>
+  </data>
+  
+  <!-- JWT Service Messages -->
+  <data name="TokenGeneratedSuccessfully" xml:space="preserve">
+    <value>Token generated successfully</value>
+  </data>
+  <data name="TokenGenerationError" xml:space="preserve">
+    <value>An error occurred while generating token</value>
+  </data>
+  <data name="TokenGenerationFailedMessage" xml:space="preserve">
+    <value>Token generation failed</value>
+  </data>
+  <!-- Subcontracting Issue Transfer Messages -->
+  <data name="SitHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Header information retrieved successfully</value>
+  </data>
+  <data name="SitHeaderErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Subcontracting Issue Header operation</value>
+  </data>
+  <data name="SitHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Header created successfully</value>
+  </data>
+  <data name="SitHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Header updated successfully</value>
+  </data>
+  <data name="SitHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Header deleted successfully</value>
+  </data>
+  <data name="SitHeaderCompletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Header completed successfully</value>
+  </data>
+  <data name="SitHeaderNotFound" xml:space="preserve">
+    <value>Subcontracting Issue Header not found</value>
+  </data>
+  <data name="SitRouteRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Route information retrieved successfully</value>
+  </data>
+  <data name="SitRouteErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Subcontracting Issue Route operation</value>
+  </data>
+  <data name="SitRouteNotFound" xml:space="preserve">
+    <value>Subcontracting Issue Route not found</value>
+  </data>
+  <data name="SitLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Line information retrieved successfully</value>
+  </data>
+  <data name="SitLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Subcontracting Issue Line operation</value>
+  </data>
+  <data name="SitLineCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Line created successfully</value>
+  </data>
+  <data name="SitLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Line updated successfully</value>
+  </data>
+  <data name="SitLineDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Line deleted successfully</value>
+  </data>
+  <data name="SitLineNotFound" xml:space="preserve">
+    <value>Subcontracting Issue Line not found</value>
+  </data>
+  <data name="SitTerminalLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Terminal Line information retrieved successfully</value>
+  </data>
+  <data name="SitTerminalLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Subcontracting Issue Terminal Line operation</value>
+  </data>
+  <data name="SitTerminalLineCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Terminal Line created successfully</value>
+  </data>
+  <data name="SitTerminalLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Terminal Line updated successfully</value>
+  </data>
+  <data name="SitTerminalLineDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Terminal Line deleted successfully</value>
+  </data>
+  <data name="SitTerminalLineNotFound" xml:space="preserve">
+    <value>Subcontracting Issue Terminal Line not found</value>
+  </data>
+  <data name="SitImportLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Import Line information retrieved successfully</value>
+  </data>
+  <data name="SitImportLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Subcontracting Issue Import Line operation</value>
+  </data>
+  <data name="SitImportLineCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Import Line created successfully</value>
+  </data>
+  <data name="SitImportLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Import Line updated successfully</value>
+  </data>
+  <data name="SitImportLineDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Import Line deleted successfully</value>
+  </data>
+  <data name="SitImportLineNotFound" xml:space="preserve">
+    <value>Subcontracting Issue Import Line not found</value>
+  </data>
+  
+  <!-- Common Service Messages -->
+  <data name="DataRetrievedSuccessfully" xml:space="preserve">
+    <value>Data retrieved successfully</value>
+  </data>
+  <data name="DataCreatedSuccessfully" xml:space="preserve">
+    <value>Data created successfully</value>
+  </data>
+  <data name="DataUpdatedSuccessfully" xml:space="preserve">
+    <value>Data updated successfully</value>
+  </data>
+  <data name="DataDeletedSuccessfully" xml:space="preserve">
+    <value>Data deleted successfully</value>
+  </data>
+  <data name="DataNotFound" xml:space="preserve">
+    <value>Data not found</value>
+  </data>
+  <data name="ErrorRetrievingData" xml:space="preserve">
+    <value>Error occurred while retrieving data</value>
+  </data>
+  <data name="ErrorCreatingData" xml:space="preserve">
+    <value>Error occurred while creating data</value>
+  </data>
+  <data name="ErrorUpdatingData" xml:space="preserve">
+    <value>Error occurred while updating data</value>
+  </data>
+  <data name="ErrorDeletingData" xml:space="preserve">
+    <value>Error occurred while deleting data</value>
+  </data>
+  <data name="ErrorOccurred" xml:space="preserve">
+    <value>An error occurred</value>
+  </data>
+  <data name="RecordNotFound" xml:space="preserve">
+    <value>Record not found</value>
+  </data>
+  <data name="RecordCreatedSuccessfully" xml:space="preserve">
+    <value>Record created successfully</value>
+  </data>
+  <data name="RecordUpdatedSuccessfully" xml:space="preserve">
+    <value>Record updated successfully</value>
+  </data>
+  <data name="RecordDeletedSuccessfully" xml:space="preserve">
+    <value>Record deleted successfully</value>
+  </data>
+  <data name="UpdateSuccess" xml:space="preserve">
+    <value>Update completed successfully</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Delete completed successfully</value>
+  </data>
+  
+  <!-- UserAuthority Service Messages -->
+  <data name="NotFound" xml:space="preserve">
+    <value>Record not found</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Record created successfully</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Record updated successfully</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Record deleted successfully</value>
+  </data>
+  
+  <!-- Additional Service Messages -->
+  <data name="RecordCreatedSuccessfully" xml:space="preserve">
+    <value>Record created successfully</value>
+  </data>
+  <data name="RecordUpdatedSuccessfully" xml:space="preserve">
+    <value>Record updated successfully</value>
+  </data>
+  <data name="RecordDeletedSuccessfully" xml:space="preserve">
+    <value>Record deleted successfully</value>
+  </data>
+  <data name="UpdateSuccess" xml:space="preserve">
+    <value>Update successful</value>
+  </data>
+  <data name="DeleteSuccess" xml:space="preserve">
+    <value>Delete successful</value>
+  </data>
+  
+  <!-- Auth Controller Messages -->
+  <data name="Error.User.InvalidCredentials" xml:space="preserve">
+    <value>Invalid username or password</value>
+  </data>
+  <data name="Success.User.LoginSuccessful" xml:space="preserve">
+    <value>Login successful</value>
+  </data>
+  <data name="Error.User.LoginFailed" xml:space="preserve">
+    <value>Login failed</value>
+  </data>
+  <data name="GoodReciptFunctionsHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Goods Open Orders Header information retrieved successfully</value>
+  </data>
+  <data name="GoodReciptFunctionsHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Open Orders Header information</value>
+  </data>
+  <data name="GoodReciptFunctionsLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Goods Open Orders Line information retrieved successfully</value>
+  </data>
+  <data name="GoodReciptFunctionsLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Goods Open Orders Line information</value>
+  </data>
+  <data name="GrImportDocumentRetrievedSuccessfully" xml:space="preserve">
+    <value>Import document information retrieved successfully</value>
+  </data>
+  <data name="GrImportDocumentGetAllError" xml:space="preserve">
+    <value>Error occurred while retrieving import documents</value>
+  </data>
+  <data name="GrImportDocumentGetByIdError" xml:space="preserve">
+    <value>Error occurred while retrieving import document</value>
+  </data>
+  <data name="GrImportDocumentGetByHeaderIdError" xml:space="preserve">
+    <value>Error occurred while retrieving import documents by header ID</value>
+  </data>
+  <data name="GrImportDocumentInvalidHeaderId" xml:space="preserve">
+    <value>Invalid Header ID provided</value>
+  </data>
+  <data name="GrImportDocumentCreatedSuccessfully" xml:space="preserve">
+    <value>Import document created successfully</value>
+  </data>
+  <data name="GrImportDocumentCreateError" xml:space="preserve">
+    <value>Error occurred while creating import document</value>
+  </data>
+  <data name="GrImportDocumentUpdatedSuccessfully" xml:space="preserve">
+    <value>Import document updated successfully</value>
+  </data>
+  <data name="GrImportDocumentUpdateError" xml:space="preserve">
+    <value>Error occurred while updating import document</value>
+  </data>
+  <data name="GrImportDocumentDeletedSuccessfully" xml:space="preserve">
+    <value>Import document deleted successfully</value>
+  </data>
+  <data name="GrImportDocumentDeleteError" xml:space="preserve">
+    <value>Error occurred while deleting import document</value>
+  </data>
+  <data name="GrImportDocumentExistsCheckError" xml:space="preserve">
+    <value>Error occurred while checking import document existence</value>
+  </data>
+  <data name="GrImportDocumentExistsCheckCompleted" xml:space="preserve">
+    <value>Import document existence check completed</value>
+  </data>
+  <data name="GrImportDocumentNotFound" xml:space="preserve">
+    <value>Import document not found</value>
+  </data>
+  <data name="MobilemenuHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Mobile menu header information retrieved successfully</value>
+  </data>
+  <data name="MobilemenuHeaderErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Mobile menu header operation</value>
+  </data>
+  <data name="MobilemenuHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Mobile menu header created successfully</value>
+  </data>
+  <data name="MobilemenuHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Mobile menu header updated successfully</value>
+  </data>
+  <data name="MobilemenuHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Mobile menu header deleted successfully</value>
+  </data>
+  <data name="MobilemenuHeaderNotFound" xml:space="preserve">
+    <value>Mobile menu header not found</value>
+  </data>
+  <data name="MobilemenuLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Mobile menu line information retrieved successfully</value>
+  </data>
+  <data name="MobilemenuLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred in Mobile menu line operation</value>
+  </data>
+  <data name="MobilemenuLineCreatedSuccessfully" xml:space="preserve">
+    <value>Mobile menu line created successfully</value>
+  </data>
+  <data name="MobilemenuLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Mobile menu line updated successfully</value>
+  </data>
+  <data name="MobilemenuLineDeletedSuccessfully" xml:space="preserve">
+    <value>Mobile menu line deleted successfully</value>
+  </data>
+  <data name="MobilemenuLineNotFound" xml:space="preserve">
+    <value>Mobile menu line not found</value>
+  </data>
+  <data name="WtHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Header information retrieved successfully</value>
+  </data>
+  <data name="WtHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Warehouse Transfer Header information</value>
+  </data>
+  <data name="WtHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Header created successfully</value>
+  </data>
+  <data name="WtHeaderCreationError" xml:space="preserve">
+    <value>Error occurred while creating Warehouse Transfer Header</value>
+  </data>
+  <data name="WtHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Header updated successfully</value>
+  </data>
+  <data name="WtHeaderUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Warehouse Transfer Header</value>
+  </data>
+  <data name="WtHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Header deleted successfully</value>
+  </data>
+  <data name="WtHeaderDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Warehouse Transfer Header</value>
+  </data>
+  <data name="WtHeaderCompletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Header completed successfully</value>
+  </data>
+  <data name="WtHeaderCompletionError" xml:space="preserve">
+    <value>Error occurred while completing Warehouse Transfer Header</value>
+  </data>
+  <data name="WtHeaderNotFound" xml:space="preserve">
+    <value>Warehouse Transfer Header not found</value>
+  </data>
+  <data name="WtHeaderAssignedOrdersRetrievedSuccessfully" xml:space="preserve">
+    <value>Assigned transfer orders retrieved successfully</value>
+  </data>
+  <data name="WtHeaderAssignedOrdersRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving assigned transfer orders</value>
+  </data>
+  <data name="WtHeaderCompletedAwaitingErpApprovalRetrievedSuccessfully" xml:space="preserve">
+    <value>Completed headers awaiting ERP approval retrieved successfully</value>
+  </data>
+  <data name="WtHeaderCompletedAwaitingErpApprovalRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving completed headers awaiting ERP approval</value>
+  </data>
+  <data name="WtHeaderBulkCreateCompletedSuccessfully" xml:space="preserve">
+    <value>Bulk Warehouse Transfer creation completed successfully</value>
+  </data>
+  <data name="WtHeaderBulkCreateError" xml:space="preserve">
+    <value>Error occurred during bulk Warehouse Transfer creation</value>
+  </data>
+  <data name="WtHeaderInvalidCorrelationKey" xml:space="preserve">
+    <value>Invalid correlation key</value>
+  </data>
+  <data name="WtHeaderLineGroupGuidNotFound" xml:space="preserve">
+    <value>LineGroupGuid not found</value>
+  </data>
+  <data name="WtHeaderLineClientKeyNotFound" xml:space="preserve">
+    <value>LineClientKey not found</value>
+  </data>
+  <data name="WtHeaderLineReferenceMissing" xml:space="preserve">
+    <value>Line reference is required</value>
+  </data>
+  <data name="WtHeaderRouteGroupGuidNotFound" xml:space="preserve">
+    <value>RouteGroupGuid not found</value>
+  </data>
+  <data name="WtHeaderGenerateCompletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer generated successfully</value>
+  </data>
+  <data name="WtHeaderGenerateError" xml:space="preserve">
+    <value>Error occurred while generating Warehouse Transfer</value>
+  </data>
+  <data name="PtHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Header information retrieved successfully</value>
+  </data>
+  <data name="PtHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Production Transfer Header information</value>
+  </data>
+  <data name="PtHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Header created successfully</value>
+  </data>
+  <data name="PtHeaderCreationError" xml:space="preserve">
+    <value>Error occurred while creating Production Transfer Header</value>
+  </data>
+  <data name="PtHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Header updated successfully</value>
+  </data>
+  <data name="PtHeaderUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Production Transfer Header</value>
+  </data>
+  <data name="PtHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Header deleted successfully</value>
+  </data>
+  <data name="PtHeaderDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Production Transfer Header</value>
+  </data>
+  <data name="PtHeaderCompletedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Header completed successfully</value>
+  </data>
+  <data name="PtHeaderCompletionError" xml:space="preserve">
+    <value>Error occurred while completing Production Transfer Header</value>
+  </data>
+  <data name="PtHeaderNotFound" xml:space="preserve">
+    <value>Production Transfer Header not found</value>
+  </data>
+  <data name="SrtHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer Header information retrieved successfully</value>
+  </data>
+  <data name="SrtHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Subcontracting Receipt Transfer Header information</value>
+  </data>
+  <data name="SrtHeaderNotFound" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer Header not found</value>
+  </data>
+  <data name="PtRouteRetrievedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Route information retrieved successfully</value>
+  </data>
+  <data name="PtRouteRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Production Transfer Route information</value>
+  </data>
+  <data name="WtRouteRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Route information retrieved successfully</value>
+  </data>
+  <data name="WtRouteRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Warehouse Transfer Route information</value>
+  </data>
+  <data name="SrtLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer Line information retrieved successfully</value>
+  </data>
+  <data name="SrtLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Subcontracting Receipt Transfer Line information</value>
+  </data>
+  <data name="SrtRouteRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer Route information retrieved successfully</value>
+  </data>
+  <data name="SrtRouteRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Subcontracting Receipt Transfer Route information</value>
+  </data>
+  <data name="WoHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Header information retrieved successfully</value>
+  </data>
+  <data name="WoHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Warehouse Outbound Header information</value>
+  </data>
+  <data name="WoHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Header created successfully</value>
+  </data>
+  <data name="WoHeaderCreationError" xml:space="preserve">
+    <value>Error occurred while creating Warehouse Outbound Header</value>
+  </data>
+  <data name="WoHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Header updated successfully</value>
+  </data>
+  <data name="WoHeaderUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Warehouse Outbound Header</value>
+  </data>
+  <data name="WoHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Header deleted successfully</value>
+  </data>
+  <data name="WoHeaderDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Warehouse Outbound Header</value>
+  </data>
+  <data name="WoHeaderCompletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Header completed successfully</value>
+  </data>
+  <data name="WoHeaderCompletionError" xml:space="preserve">
+    <value>Error occurred while completing Warehouse Outbound Header</value>
+  </data>
+  <data name="WoHeaderNotFound" xml:space="preserve">
+    <value>Warehouse Outbound Header not found</value>
+  </data>
+  <data name="WoRouteRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Route information retrieved successfully</value>
+  </data>
+  <data name="WoRouteRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Warehouse Outbound Route information</value>
+  </data>
+  <data name="WoRouteCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Route created successfully</value>
+  </data>
+  <data name="WoRouteCreationError" xml:space="preserve">
+    <value>Error occurred while creating Warehouse Outbound Route</value>
+  </data>
+  <data name="WoRouteUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Route updated successfully</value>
+  </data>
+  <data name="WoRouteUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Warehouse Outbound Route</value>
+  </data>
+  <data name="WoRouteDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Route deleted successfully</value>
+  </data>
+  <data name="WoRouteDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Warehouse Outbound Route</value>
+  </data>
+  <data name="WoRouteNotFound" xml:space="preserve">
+    <value>Warehouse Outbound Route not found</value>
+  </data>
+  <data name="PlatformUserGroupMatchRetrievedSuccessfully" xml:space="preserve">
+    <value>Platform user group match information retrieved successfully</value>
+  </data>
+  <data name="PlatformUserGroupMatchRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving platform user group match information</value>
+  </data>
+  <data name="PlatformPageGroupRetrievedSuccessfully" xml:space="preserve">
+    <value>Platform page group information retrieved successfully</value>
+  </data>
+  <data name="PlatformPageGroupRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving platform page group information</value>
+  </data>
+  <data name="PlatformPageGroupCreatedSuccessfully" xml:space="preserve">
+    <value>Platform page group created successfully</value>
+  </data>
+  <data name="PlatformPageGroupCreationError" xml:space="preserve">
+    <value>Error occurred while creating platform page group</value>
+  </data>
+  <data name="PlatformPageGroupUpdatedSuccessfully" xml:space="preserve">
+    <value>Platform page group updated successfully</value>
+  </data>
+  <data name="PlatformPageGroupUpdateError" xml:space="preserve">
+    <value>Error occurred while updating platform page group</value>
+  </data>
+  <data name="PlatformPageGroupDeletedSuccessfully" xml:space="preserve">
+    <value>Platform page group deleted successfully</value>
+  </data>
+  <data name="PlatformPageGroupDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting platform page group</value>
+  </data>
+  <data name="PlatformPageGroupNotFound" xml:space="preserve">
+    <value>Platform page group not found</value>
+  </data>
+  <data name="SidebarmenuHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Sidebar menu header information retrieved successfully</value>
+  </data>
+  <data name="SidebarmenuHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving sidebar menu header information</value>
+  </data>
+  <data name="SidebarmenuHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Sidebar menu header deleted successfully</value>
+  </data>
+  <data name="SidebarmenuHeaderDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting sidebar menu header</value>
+  </data>
+  <data name="SidebarmenuHeaderNotFound" xml:space="preserve">
+    <value>Sidebar menu header not found</value>
+  </data>
+  <data name="MobileUserGroupMatchRetrievedSuccessfully" xml:space="preserve">
+    <value>Mobile user group match information retrieved successfully</value>
+  </data>
+  <data name="MobileUserGroupMatchRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving mobile user group match information</value>
+  </data>
+  <data name="MobileUserGroupMatchCreatedSuccessfully" xml:space="preserve">
+    <value>Mobile user group match created successfully</value>
+  </data>
+  <data name="MobileUserGroupMatchCreationError" xml:space="preserve">
+    <value>Error occurred while creating mobile user group match</value>
+  </data>
+  <data name="MobileUserGroupMatchUpdatedSuccessfully" xml:space="preserve">
+    <value>Mobile user group match updated successfully</value>
+  </data>
+  <data name="MobileUserGroupMatchUpdateError" xml:space="preserve">
+    <value>Error occurred while updating mobile user group match</value>
+  </data>
+  <data name="MobileUserGroupMatchDeletedSuccessfully" xml:space="preserve">
+    <value>Mobile user group match deleted successfully</value>
+  </data>
+  <data name="MobileUserGroupMatchDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting mobile user group match</value>
+  </data>
+  <data name="MobileUserGroupMatchNotFound" xml:space="preserve">
+    <value>Mobile user group match not found</value>
+  </data>
+  <data name="PtRouteCreatedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Route created successfully</value>
+  </data>
+  <data name="PtRouteCreationError" xml:space="preserve">
+    <value>Error occurred while creating Production Transfer Route</value>
+  </data>
+  <data name="PtRouteUpdatedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Route updated successfully</value>
+  </data>
+  <data name="PtRouteUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Production Transfer Route</value>
+  </data>
+  <data name="PtRouteDeletedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Route deleted successfully</value>
+  </data>
+  <data name="PtRouteDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Production Transfer Route</value>
+  </data>
+  <data name="PtRouteNotFound" xml:space="preserve">
+    <value>Production Transfer Route not found</value>
+  </data>
+  <data name="SidebarmenuLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Sidebar menu line information retrieved successfully</value>
+  </data>
+  <data name="SidebarmenuLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving sidebar menu line information</value>
+  </data>
+  <data name="SidebarmenuLineCreatedSuccessfully" xml:space="preserve">
+    <value>Sidebar menu line created successfully</value>
+  </data>
+  <data name="SidebarmenuLineCreationError" xml:space="preserve">
+    <value>Error occurred while creating sidebar menu line</value>
+  </data>
+  <data name="SidebarmenuLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Sidebar menu line updated successfully</value>
+  </data>
+  <data name="SidebarmenuLineUpdateError" xml:space="preserve">
+    <value>Error occurred while updating sidebar menu line</value>
+  </data>
+  <data name="SidebarmenuLineDeletedSuccessfully" xml:space="preserve">
+    <value>Sidebar menu line deleted successfully</value>
+  </data>
+  <data name="SidebarmenuLineDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting sidebar menu line</value>
+  </data>
+  <data name="SidebarmenuLineNotFound" xml:space="preserve">
+    <value>Sidebar menu line not found</value>
+  </data>
+  <data name="PtLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Line information retrieved successfully</value>
+  </data>
+  <data name="PtLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Production Transfer Line information</value>
+  </data>
+  <data name="PtLineCreatedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Line created successfully</value>
+  </data>
+  <data name="PtLineCreationError" xml:space="preserve">
+    <value>Error occurred while creating Production Transfer Line</value>
+  </data>
+  <data name="PtLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Line updated successfully</value>
+  </data>
+  <data name="PtLineUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Production Transfer Line</value>
+  </data>
+  <data name="PtLineDeletedSuccessfully" xml:space="preserve">
+    <value>Production Transfer Line deleted successfully</value>
+  </data>
+  <data name="PtLineDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Production Transfer Line</value>
+  </data>
+  <data name="PtLineNotFound" xml:space="preserve">
+    <value>Production Transfer Line not found</value>
+  </data>
+  <data name="SrtLineCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer Line created successfully</value>
+  </data>
+  <data name="SrtLineCreationError" xml:space="preserve">
+    <value>Error occurred while creating Subcontracting Receipt Transfer Line</value>
+  </data>
+  <data name="SrtLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer Line updated successfully</value>
+  </data>
+  <data name="SrtLineUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Subcontracting Receipt Transfer Line</value>
+  </data>
+  <data name="SrtLineDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer Line deleted successfully</value>
+  </data>
+  <data name="SrtLineDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Subcontracting Receipt Transfer Line</value>
+  </data>
+  <data name="SrtLineNotFound" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer Line not found</value>
+  </data>
+  <data name="WtRouteErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Warehouse Transfer Route</value>
+  </data>
+  <data name="WtRouteRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Route information retrieved successfully</value>
+  </data>
+  <data name="WtLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Line information retrieved successfully</value>
+  </data>
+  <data name="WtLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Warehouse Transfer Line</value>
+  </data>
+  <data name="WtLineCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Line created successfully</value>
+  </data>
+  <data name="WtLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Line updated successfully</value>
+  </data>
+  <data name="WtLineDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Line deleted successfully</value>
+  </data>
+  <data name="WtLineNotFound" xml:space="preserve">
+    <value>Warehouse Transfer Line not found</value>
+  </data>
+  <data name="WtImportLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Import Line information retrieved successfully</value>
+  </data>
+  <data name="WtImportLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Warehouse Transfer Import Line</value>
+  </data>
+  <data name="WtImportLineCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Import Line created successfully</value>
+  </data>
+  <data name="WtImportLineStokCodeAndYapCodeNotMatch" xml:space="preserve">
+    <value>Stock code and YapKod do not match existing import lines</value>
+  </data>
+  <data name="WtImportLineSerialNotMatch" xml:space="preserve">
+    <value>Serial number does not match line serial records</value>
+  </data>
+  <data name="WtImportLineDuplicateSerialFound" xml:space="preserve">
+    <value>Duplicate record found</value>
+  </data>
+  <data name="WtImportLineQuantityInvalid" xml:space="preserve">
+    <value>Quantity must be greater than 0</value>
+  </data>
+  <data name="WtImportLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Import Line updated successfully</value>
+  </data>
+  <data name="WtImportLineDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Import Line deleted successfully</value>
+  </data>
+  <data name="WtImportLineNotFound" xml:space="preserve">
+    <value>Warehouse Transfer Import Line not found</value>
+  </data>
+  <data name="WtTerminalLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Terminal Line information retrieved successfully</value>
+  </data>
+  <data name="WtTerminalLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Warehouse Transfer Terminal Line</value>
+  </data>
+  <data name="WtTerminalLineCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Terminal Line created successfully</value>
+  </data>
+  <data name="WtTerminalLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Terminal Line updated successfully</value>
+  </data>
+  <data name="WtTerminalLineDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Transfer Terminal Line deleted successfully</value>
+  </data>
+  <data name="WtTerminalLineNotFound" xml:space="preserve">
+    <value>Warehouse Transfer Terminal Line not found</value>
+  </data>
+  <data name="WoLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Line information retrieved successfully</value>
+  </data>
+  <data name="WoLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Warehouse Outbound Line information</value>
+  </data>
+  <data name="WoLineCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Line created successfully</value>
+  </data>
+  <data name="WoLineCreationError" xml:space="preserve">
+    <value>Error occurred while creating Warehouse Outbound Line</value>
+  </data>
+  <data name="WoLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Line updated successfully</value>
+  </data>
+  <data name="WoLineUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Warehouse Outbound Line</value>
+  </data>
+  <data name="WoLineDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Line deleted successfully</value>
+  </data>
+  <data name="WoLineDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Warehouse Outbound Line</value>
+  </data>
+  <data name="WoLineNotFound" xml:space="preserve">
+    <value>Warehouse Outbound Line not found</value>
+  </data>
+  <data name="WoImportLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Import Line information retrieved successfully</value>
+  </data>
+  <data name="WoImportLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Warehouse Outbound Import Line</value>
+  </data>
+  <data name="WoImportLineCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Import Line created successfully</value>
+  </data>
+  <data name="WoImportLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Import Line updated successfully</value>
+  </data>
+  <data name="WoImportLineDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Import Line deleted successfully</value>
+  </data>
+  <data name="WoImportLineNotFound" xml:space="preserve">
+    <value>Warehouse Outbound Import Line not found</value>
+  </data>
+  <data name="WoTerminalLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Terminal Line information retrieved successfully</value>
+  </data>
+  <data name="WoTerminalLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Warehouse Outbound Terminal Line</value>
+  </data>
+  <data name="WoTerminalLineCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Terminal Line created successfully</value>
+  </data>
+  <data name="WoTerminalLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Terminal Line updated successfully</value>
+  </data>
+  <data name="WoTerminalLineDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse Outbound Terminal Line deleted successfully</value>
+  </data>
+  <data name="WoTerminalLineNotFound" xml:space="preserve">
+    <value>Warehouse Outbound Terminal Line not found</value>
+  </data>
+  <data name="WiLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Inbound Line information retrieved successfully</value>
+  </data>
+  <data name="WiLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Warehouse Inbound Line</value>
+  </data>
+  <data name="WiTerminalLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse Inbound Terminal Line information retrieved successfully</value>
+  </data>
+  <data name="WiTerminalLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Warehouse Inbound Terminal Line</value>
+  </data>
+  <data name="AuthUserNotFound" xml:space="preserve">
+    <value>Authentication user not found</value>
+  </data>
+  <data name="AuthUserRetrievedSuccessfully" xml:space="preserve">
+    <value>Authentication user retrieved successfully</value>
+  </data>
+  <data name="AuthErrorOccurred" xml:space="preserve">
+    <value>Error occurred during authentication operation</value>
+  </data>
+  <data name="PlatformUserGroupMatchNotFound" xml:space="preserve">
+    <value>Platform user-group match not found</value>
+  </data>
+  <data name="PlatformUserGroupMatchCreatedSuccessfully" xml:space="preserve">
+    <value>Platform user-group match created successfully</value>
+  </data>
+  <data name="PlatformUserGroupMatchCreationError" xml:space="preserve">
+    <value>Error occurred while creating platform user-group match</value>
+  </data>
+  <data name="PlatformUserGroupMatchUpdatedSuccessfully" xml:space="preserve">
+    <value>Platform user-group match updated successfully</value>
+  </data>
+  <data name="PlatformUserGroupMatchUpdateError" xml:space="preserve">
+    <value>Error occurred while updating platform user-group match</value>
+  </data>
+  <data name="PlatformUserGroupMatchDeletedSuccessfully" xml:space="preserve">
+    <value>Platform user-group match deleted successfully</value>
+  </data>
+  <data name="PlatformUserGroupMatchDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting platform user-group match</value>
+  </data>
+  <data name="PlatformUserGroupMatchExistenceCheckError" xml:space="preserve">
+    <value>Error occurred while checking existence of platform user-group match</value>
+  </data>
+  <data name="SrtHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer header created successfully</value>
+  </data>
+  <data name="SrtHeaderCreationError" xml:space="preserve">
+    <value>Error occurred while creating Subcontracting Receipt Transfer header</value>
+  </data>
+  <data name="SrtHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer header updated successfully</value>
+  </data>
+  <data name="SrtHeaderUpdateError" xml:space="preserve">
+    <value>Error occurred while updating Subcontracting Receipt Transfer header</value>
+  </data>
+  <data name="SrtHeaderDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer header deleted successfully</value>
+  </data>
+  <data name="SrtHeaderDeletionError" xml:space="preserve">
+    <value>Error occurred while deleting Subcontracting Receipt Transfer header</value>
+  </data>
+  <data name="SrtHeaderCompletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer header completed successfully</value>
+  </data>
+  <data name="SrtHeaderCompletionError" xml:space="preserve">
+    <value>Error occurred while completing Subcontracting Receipt Transfer header</value>
+  </data>
+  <data name="WtFunctionTransferOpenOrderHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse transfer open order header information retrieved successfully</value>
+  </data>
+  <data name="WtFunctionTransferOpenOrderHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving warehouse transfer open order header information</value>
+  </data>
+  <data name="WtFunctionTransferOpenOrderLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse transfer open order line information retrieved successfully</value>
+  </data>
+  <data name="WtFunctionTransferOpenOrderLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving warehouse transfer open order line information</value>
+  </data>
+  <data name="SitLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Transfer line information retrieved successfully</value>
+  </data>
+  <data name="SitLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Subcontracting Issue Transfer line information</value>
+  </data>
+  <data name="SitImportLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Transfer import line information retrieved successfully</value>
+  </data>
+  <data name="SitImportLineRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Subcontracting Issue Transfer import line information</value>
+  </data>
+  <data name="SitHeaderRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Issue Transfer header information retrieved successfully</value>
+  </data>
+  <data name="SitHeaderRetrievalError" xml:space="preserve">
+    <value>Error occurred while retrieving Subcontracting Issue Transfer header information</value>
+  </data>
+  <data name="SitHeaderNotFound" xml:space="preserve">
+    <value>Subcontracting Issue Transfer header not found</value>
+  </data>
+  <data name="SitRouteNotFound" xml:space="preserve">
+    <value>Subcontracting Issue Transfer route not found</value>
+  </data>
+  <data name="AuthUserAlreadyExists" xml:space="preserve">
+    <value>User already exists</value>
+  </data>
+  <data name="AuthUserRegisteredSuccessfully" xml:space="preserve">
+    <value>User registered successfully</value>
+  </data>
+  <data name="AuthRegistrationFailed" xml:space="preserve">
+    <value>Registration failed</value>
+  </data>
+  <data name="SidebarmenuHeaderCreatedSuccessfully" xml:space="preserve">
+    <value>Sidebar menu header created successfully</value>
+  </data>
+  <data name="SidebarmenuHeaderCreationError" xml:space="preserve">
+    <value>Error occurred while creating sidebar menu header</value>
+  </data>
+  <data name="SidebarmenuHeaderUpdatedSuccessfully" xml:space="preserve">
+    <value>Sidebar menu header updated successfully</value>
+  </data>
+  <data name="SidebarmenuHeaderUpdateError" xml:space="preserve">
+    <value>Error occurred while updating sidebar menu header</value>
+  </data>
+  <data name="WiImportLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Warehouse import line information retrieved successfully</value>
+  </data>
+  <data name="WiImportLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing warehouse import line</value>
+  </data>
+  <data name="WiImportLineNotFound" xml:space="preserve">
+    <value>Warehouse import line not found</value>
+  </data>
+  <data name="WiImportLineCreatedSuccessfully" xml:space="preserve">
+    <value>Warehouse import line created successfully</value>
+  </data>
+  <data name="WiImportLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Warehouse import line updated successfully</value>
+  </data>
+  <data name="WiImportLineDeletedSuccessfully" xml:space="preserve">
+    <value>Warehouse import line deleted successfully</value>
+  </data>
+  <data name="SrtTerminalLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer terminal line information retrieved successfully</value>
+  </data>
+  <data name="SrtTerminalLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Subcontracting Receipt Transfer terminal line</value>
+  </data>
+  <data name="SrtTerminalLineNotFound" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer terminal line not found</value>
+  </data>
+  <data name="SrtTerminalLineCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer terminal line created successfully</value>
+  </data>
+  <data name="SrtTerminalLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer terminal line updated successfully</value>
+  </data>
+  <data name="SrtTerminalLineDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer terminal line deleted successfully</value>
+  </data>
+  <data name="SrtRouteErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Subcontracting Receipt Transfer route</value>
+  </data>
+  <data name="SrtRouteNotFound" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer route not found</value>
+  </data>
+  <data name="SrtRouteCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer route created successfully</value>
+  </data>
+  <data name="SrtRouteUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer route updated successfully</value>
+  </data>
+  <data name="SrtRouteDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer route deleted successfully</value>
+  </data>
+  <data name="SrtImportLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer import line information retrieved successfully</value>
+  </data>
+  <data name="SrtImportLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Subcontracting Receipt Transfer import line</value>
+  </data>
+  <data name="SrtImportLineNotFound" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer import line not found</value>
+  </data>
+  <data name="SrtImportLineCreatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer import line created successfully</value>
+  </data>
+  <data name="SrtImportLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer import line updated successfully</value>
+  </data>
+  <data name="SrtImportLineDeletedSuccessfully" xml:space="preserve">
+    <value>Subcontracting Receipt Transfer import line deleted successfully</value>
+  </data>
+  <data name="PtImportLineRetrievedSuccessfully" xml:space="preserve">
+    <value>Production Transfer import line information retrieved successfully</value>
+  </data>
+  <data name="PtImportLineErrorOccurred" xml:space="preserve">
+    <value>Error occurred while processing Production Transfer import line</value>
+  </data>
+  <data name="PtImportLineNotFound" xml:space="preserve">
+    <value>Production Transfer import line not found</value>
+  </data>
+  <data name="PtImportLineCreatedSuccessfully" xml:space="preserve">
+    <value>Production Transfer import line created successfully</value>
+  </data>
+  <data name="PtImportLineUpdatedSuccessfully" xml:space="preserve">
+    <value>Production Transfer import line updated successfully</value>
+  </data>
+  <data name="PtImportLineDeletedSuccessfully" xml:space="preserve">
+    <value>Production Transfer import line deleted successfully</value>
+  </data>
+</root>

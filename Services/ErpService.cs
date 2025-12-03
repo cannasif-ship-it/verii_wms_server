@@ -1,0 +1,199 @@
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using WMS_WEBAPI.Data;
+using WMS_WEBAPI.DTOs;
+using WMS_WEBAPI.Interfaces;
+using Microsoft.AspNetCore.Http;
+using WMS_WEBAPI.Models;
+
+namespace WMS_WEBAPI.Services
+{
+    public class ErpService : IErpService
+    {
+        private readonly ErpDbContext _erpContext;
+        private readonly IMapper _mapper;
+        private readonly ILocalizationService _localizationService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public ErpService(ErpDbContext erpContext, IMapper mapper, ILocalizationService localizationService, IHttpContextAccessor httpContextAccessor)
+        {
+            _erpContext = erpContext;
+            _mapper = mapper;
+            _localizationService = localizationService;
+            _httpContextAccessor = httpContextAccessor;
+        }
+
+        // OnHandQuantity işlemleri
+
+        public async Task<ApiResponse<List<OnHandQuantityDto>>> GetOnHandQuantitiesAsync(int? depoKodu = null, string? stokKodu = null, string? seriNo = null, string? projeKodu = null)
+        {
+            try
+            {
+                var stokParam = string.IsNullOrWhiteSpace(stokKodu) ? null : stokKodu;
+                var seriParam = string.IsNullOrWhiteSpace(seriNo) ? null : seriNo;
+                var projeParam = string.IsNullOrWhiteSpace(projeKodu) ? null : projeKodu;
+
+                var rows = await _erpContext.OnHandQuantities
+                .FromSqlRaw("SELECT * FROM dbo.RII_FN_ONHANDQUANTITY({0}, {1}, {2}, {3})", depoKodu, stokKodu, seriNo, projeKodu)
+                .AsNoTracking()
+                .ToListAsync();
+
+                var mappedList = _mapper.Map<List<OnHandQuantityDto>>(rows);
+
+                return ApiResponse<List<OnHandQuantityDto>>.SuccessResult(mappedList, _localizationService.GetLocalizedString("OnHandQuantityRetrievedSuccessfully"));
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<List<OnHandQuantityDto>>.ErrorResult(_localizationService.GetLocalizedString("OnHandQuantityRetrievalError"), ex.Message, 500, ex.Message);
+            }
+        }
+
+        // Cari işlemleri
+        public async Task<ApiResponse<List<CariDto>>> GetCarisAsync(string? cariKodu)
+        {
+            try
+            {
+                var subeFromContext = _httpContextAccessor.HttpContext?.Items["BranchCode"] as string;
+                var subeKodu = string.IsNullOrWhiteSpace(subeFromContext) ? null : subeFromContext;
+
+                var result = await _erpContext.Caris
+                    .FromSqlRaw("SELECT * FROM dbo.RII_FN_CARI({0}, {1})", string.IsNullOrWhiteSpace(cariKodu) ? null : cariKodu, subeKodu)
+                    .AsNoTracking()
+                    .ToListAsync();
+
+                var mappedResult = _mapper.Map<List<CariDto>>(result);
+                return ApiResponse<List<CariDto>>.SuccessResult(mappedResult, _localizationService.GetLocalizedString("CariRetrievedSuccessfully"));
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<List<CariDto>>.ErrorResult(_localizationService.GetLocalizedString("CariRetrievalError"), ex.Message, 500, "Error retrieving Cari data");
+            }
+        }
+
+        public async Task<ApiResponse<List<CariDto>>> GetCarisByCodesAsync(IEnumerable<string> cariKodlari)
+        {
+            try
+            {
+                var codes = (cariKodlari ?? Array.Empty<string>())
+                    .Where(s => !string.IsNullOrWhiteSpace(s))
+                    .Select(s => s.Trim())
+                    .Distinct()
+                    .ToList();
+
+                var cariParam = codes.Count == 0 ? null : string.Join(",", codes);
+
+                var subeFromContext = _httpContextAccessor.HttpContext?.Items["BranchCode"] as string;
+                var subeCsv = string.IsNullOrWhiteSpace(subeFromContext)
+                    ? null
+                    : string.Join(",", subeFromContext.Split(',').Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)));
+
+                var result = await _erpContext.Caris
+                    .FromSqlRaw("SELECT * FROM dbo.RII_FN_CARI({0}, {1})", cariParam, subeCsv)
+                    .AsNoTracking()
+                    .ToListAsync();
+
+                var mappedResult = _mapper.Map<List<CariDto>>(result);
+                return ApiResponse<List<CariDto>>.SuccessResult(mappedResult, _localizationService.GetLocalizedString("CariRetrievedSuccessfully"));
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<List<CariDto>>.ErrorResult(_localizationService.GetLocalizedString("CariRetrievalError"), ex.Message, 500, "Error retrieving Cari data");
+            }
+        }
+
+        // Stok işlemleri
+        public async Task<ApiResponse<List<StokDto>>> GetStoksAsync(string? stokKodu)
+        {
+            try
+            {
+                var subeFromContext = _httpContextAccessor.HttpContext?.Items["BranchCode"] as string;
+                var subeKodu = string.IsNullOrWhiteSpace(subeFromContext) ? null : subeFromContext;
+
+                var result = await _erpContext.Stoks
+                    .FromSqlRaw("SELECT * FROM dbo.RII_FN_STOK({0}, {1})", string.IsNullOrWhiteSpace(stokKodu) ? null : stokKodu, subeKodu)
+                    .AsNoTracking()
+                    .ToListAsync();
+                var mappedResult = _mapper.Map<List<StokDto>>(result);
+
+                return ApiResponse<List<StokDto>>.SuccessResult(mappedResult, _localizationService.GetLocalizedString("StokRetrievedSuccessfully"));
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<List<StokDto>>.ErrorResult(_localizationService.GetLocalizedString("StokRetrievalError"), ex.Message, 500, "Error retrieving Stok data");
+            }
+        }
+
+        public async Task<ApiResponse<List<StokDto>>> GetStoksByCodesAsync(IEnumerable<string> stokKodlari)
+        {
+            try
+            {
+                var codes = (stokKodlari ?? Array.Empty<string>())
+                    .Where(s => !string.IsNullOrWhiteSpace(s))
+                    .Select(s => s.Trim())
+                    .Distinct()
+                    .ToList();
+
+                var stokParam = codes.Count == 0 ? null : string.Join(",", codes);
+
+                var subeFromContext = _httpContextAccessor.HttpContext?.Items["BranchCode"] as string;
+                var subeCsv = string.IsNullOrWhiteSpace(subeFromContext)
+                    ? null
+                    : string.Join(",", subeFromContext.Split(',').Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)));
+
+                var result = await _erpContext.Stoks
+                    .FromSqlRaw("SELECT * FROM dbo.RII_FN_STOK({0}, {1})", stokParam, subeCsv)
+                    .AsNoTracking()
+                    .ToListAsync();
+
+                var mappedResult = _mapper.Map<List<StokDto>>(result);
+
+                return ApiResponse<List<StokDto>>.SuccessResult(mappedResult, _localizationService.GetLocalizedString("StokRetrievedSuccessfully"));
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<List<StokDto>>.ErrorResult(_localizationService.GetLocalizedString("StokRetrievalError"), ex.Message, 500, "Error retrieving Stok data");
+            }
+        }
+
+        // Depo işlemleri
+        public async Task<ApiResponse<List<DepoDto>>> GetDeposAsync(short? depoKodu)
+        {
+            try
+            {
+                var subeFromContext = _httpContextAccessor.HttpContext?.Items["BranchCode"] as string;
+                var subeKodu = string.IsNullOrWhiteSpace(subeFromContext) ? null : subeFromContext;
+
+                var result = await _erpContext.Depos
+                    .FromSqlRaw("SELECT * FROM dbo.RII_FN_DEPO({0}, {1})", depoKodu, subeKodu)
+                    .AsNoTracking()
+                    .ToListAsync();
+                var mappedResult = _mapper.Map<List<DepoDto>>(result);
+
+                return ApiResponse<List<DepoDto>>.SuccessResult(mappedResult, _localizationService.GetLocalizedString("DepoRetrievedSuccessfully"));
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<List<DepoDto>>.ErrorResult(_localizationService.GetLocalizedString("DepoRetrievalError"), ex.Message, 500, "Error retrieving Depo data");
+            }
+        }
+
+        // Proje işlemleri
+        public async Task<ApiResponse<List<ProjeDto>>> GetProjelerAsync()
+        {
+            try
+            {
+                var result = await _erpContext.Projeler.ToListAsync();
+                var mappedResult = _mapper.Map<List<ProjeDto>>(result);
+
+                return ApiResponse<List<ProjeDto>>.SuccessResult(mappedResult, _localizationService.GetLocalizedString("ProjeRetrievedSuccessfully"));
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<List<ProjeDto>>.ErrorResult(_localizationService.GetLocalizedString("ProjeRetrievalError"), ex.Message, 500, "Error retrieving Proje data");
+            }
+        }
+
+
+
+    }
+}
