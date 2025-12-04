@@ -154,7 +154,10 @@ namespace WMS_WEBAPI.Data
             {
                 entity.HasNoKey();
             });
-
+            modelBuilder.Entity<FN_TransferOpenOrder_Line>(entity =>
+            {
+                entity.HasNoKey();
+            });
         }
     }
 }
